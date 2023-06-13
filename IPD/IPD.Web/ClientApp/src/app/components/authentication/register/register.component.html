@@ -1,0 +1,28 @@
+<form [formGroup]="basicInfoForm" (ngSubmit)="registerUser(basicInfoForm.value)">
+
+  <label for="firstName" class="block text-900 font-medium mb-2">First Name</label>
+  <input id="firstName" formControlName="firstName" type="text" pInputText class="w-full p-3" placeholder="First Name" [required] [ngClass]="{'ng-invalid ng-dirty' : validateControl('firstName') && hasError('firstName', 'required')}">
+  <small class="ng-dirty ng-invalid mt-2 block" *ngIf="validateControl('firstName') && hasError('firstName', 'required')">First Name is required</small>
+
+  <label for="lastName" class="block text-900 font-medium mt-3 mb-2">Last Name</label>
+  <input id="lastName" formControlName="lastName" type="text" pInputText class="w-full p-3" placeholder="Last Name" [required] [ngClass]="{'ng-invalid ng-dirty' : validateControl('lastName') && hasError('lastName', 'required')}">
+  <small class="ng-dirty ng-invalid mt-2 block" *ngIf="validateControl('lastName') && hasError('lastName', 'required')">Last Name is required</small>
+
+
+  <label for="email" class="block text-900 font-medium mt-3 mb-2"> Email Address</label>
+  <input pInputText id="email" formControlName="email" type="text" class="w-full p-3"  placeholder="Email Address" [required] [ngClass]="{'ng-invalid ng-dirty' : (validateControl('email') && hasError('email', 'email') || validateControl('email') && hasError('email', 'required'))}">
+  <small class="ng-dirty ng-invalid mt-2 block" *ngIf="validateControl('email') && hasError('email', 'email')">Please provide a valid email</small>
+  <small class="ng-dirty ng-invalid mt-2 block" *ngIf="validateControl('email') && hasError('email', 'required')">Email is required</small>
+
+  <label for="password" class="block text-900 font-medium mt-3 mb-2">Password</label>
+  <input id="password" formControlName="password" type="password" pInputText class="w-full p-3" placeholder="Password" [required] [ngClass]="{'ng-invalid ng-dirty' : validateControl('password') && hasError('password', 'required')}">
+  <small class="ng-dirty ng-invalid mt-2 block" *ngIf="validateControl('password') && hasError('password', 'required')">Password is required</small>
+
+  <label for="confirmPassword" class="block text-900 font-medium mt-3 mb-2">Confirm Password</label>
+  <input id="confirmPassword" formControlName="confirmPassword" type="password" pInputText class="w-full p-3" placeholder="Confirm Password" [required] [ngClass]="{'ng-invalid ng-dirty' : basicInfoForm.hasError('notmatched')}">
+  <small class="ng-dirty ng-invalid mt-2 block" *ngIf="basicInfoForm.controls['confirmPassword'].touched && basicInfoForm.hasError('notmatched')">The Password and Confirmation Password do not match</small>
+
+  
+
+  <button type="submit" pButton pRipple label="Continue" class="w-full py-3 font-medium" [disabled]="!basicInfoForm.valid"></button>
+</form>

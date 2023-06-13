@@ -1,0 +1,20 @@
+
+<form [formGroup]="loginForm" autocomplete="off" novalidate (ngSubmit)="loginUser(loginForm.value)">
+  <label for="email" class="block text-900 font-medium mb-2">Username / Email</label>
+  <input id="email" formControlName="email" type="text" pInputText class="w-full p-3" [required] [ngClass]="{'ng-invalid ng-dirty' : (validateControl('email') && hasError('email', 'email') || validateControl('email') && hasError('email', 'required'))}">
+  <small class="ng-dirty ng-invalid mt-2 block" *ngIf="validateControl('email') && hasError('email', 'email')">Please provide a valid email</small>
+  <small class="ng-dirty ng-invalid mt-2 block" *ngIf="validateControl('email') && hasError('email', 'required')">Email is required</small>
+
+  <label for="password" class="block text-900 font-medium mt-3 mb-2">Password</label>
+  <input id="password" formControlName="password" type="password" pInputText class="w-full p-3" [required] [ngClass]="{'ng-invalid ng-dirty' : validateControl('password') && hasError('password', 'required')}">
+  <small class="ng-dirty ng-invalid mt-2 block" *ngIf="validateControl('password') && hasError('password', 'required')">Password is required</small>
+
+  <div class="flex align-items-center justify-content-between mt-3 mb-6">
+    <div class="flex align-items-center">
+      <label for="rememberme">Remember me</label>
+    </div>
+    <a [routerLink]="['/forgot-password']" class="font-medium text-blue-500 hover:text-blue-700 cursor-pointer transition-colors transition-duration-150">Forgot password?</a>
+  </div>
+
+  <button type="submit" pButton pRipple label="Sign In" class="w-full py-3 font-medium" [disabled]="!loginForm.valid || submitted"></button>
+</form>

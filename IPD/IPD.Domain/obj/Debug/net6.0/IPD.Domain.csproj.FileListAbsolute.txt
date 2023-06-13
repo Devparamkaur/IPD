@@ -1,0 +1,12 @@
+C:\Users\devku\source\repos\IPD.Domain\bin\Debug\net6.0\IPD.Domain.deps.json
+C:\Users\devku\source\repos\IPD.Domain\bin\Debug\net6.0\IPD.Domain.dll
+C:\Users\devku\source\repos\IPD.Domain\bin\Debug\net6.0\IPD.Domain.pdb
+C:\Users\devku\source\repos\IPD.Domain\obj\Debug\net6.0\IPD.Domain.csproj.AssemblyReference.cache
+C:\Users\devku\source\repos\IPD.Domain\obj\Debug\net6.0\IPD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\devku\source\repos\IPD.Domain\obj\Debug\net6.0\IPD.Domain.AssemblyInfoInputs.cache
+C:\Users\devku\source\repos\IPD.Domain\obj\Debug\net6.0\IPD.Domain.AssemblyInfo.cs
+C:\Users\devku\source\repos\IPD.Domain\obj\Debug\net6.0\IPD.Domain.csproj.CoreCompileInputs.cache
+C:\Users\devku\source\repos\IPD.Domain\obj\Debug\net6.0\IPD.Domain.dll
+C:\Users\devku\source\repos\IPD.Domain\obj\Debug\net6.0\refint\IPD.Domain.dll
+C:\Users\devku\source\repos\IPD.Domain\obj\Debug\net6.0\IPD.Domain.pdb
+C:\Users\devku\source\repos\IPD.Domain\obj\Debug\net6.0\ref\IPD.Domain.dll

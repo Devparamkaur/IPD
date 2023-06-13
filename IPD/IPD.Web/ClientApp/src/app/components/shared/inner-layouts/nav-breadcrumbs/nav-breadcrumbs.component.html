@@ -1,0 +1,22 @@
+<ul class="list-none py-3 px-5 m-0 surface-section flex align-items-center font-medium overflow-x-auto border-top-1 border-bottom-1 surface-border">
+  <li class="pr-3">
+    <a class="cursor-pointer" [routerLink]="['/homr']">
+      <i class="pi pi-home text-600"></i>
+    </a>
+  </li>
+  <li class="px-2">
+    <i class="pi pi-angle-right text-600"></i>
+  </li>
+  <ng-container *ngFor="let item of model;">
+    <li class="px-2">
+      <a *ngIf="item.Active" class="text-600 white-space-nowrap" style="text-decoration: none;">{{ item.Name }}</a>
+      <a *ngIf="!item.Active" class="text-primary cursor-pointer white-space-nowrap" style="text-decoration: none;"
+         [routerLink]="[item.Path]">
+        {{ item.Name }}
+      </a>
+    </li>
+    <li *ngIf="!item.Active" class="px-2">
+      <i class="pi pi-angle-right text-600"></i>
+    </li>
+  </ng-container>
+</ul>

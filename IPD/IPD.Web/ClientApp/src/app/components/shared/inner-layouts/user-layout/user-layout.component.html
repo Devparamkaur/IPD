@@ -1,0 +1,16 @@
+<body [@fadeAnimation]>
+  <div class="min-h-screen flex flex-column surface-ground p-input-filled">
+    <app-nav-menu></app-nav-menu>
+    <app-nav-breadcrumbs></app-nav-breadcrumbs>
+    <div class="flex relative lg:static p-5. flex-auto">
+      <div id="app-sidebar" class="surface-card lg:block. flex-shrink-0 absolute lg:static left-0 top-0 z-2 select-none shadow-1" style="width:280px;" [ngClass]="{ 'mini-nav': MiniNav }">
+        <app-nav-sidebar></app-nav-sidebar>
+      </div>
+      <div id="app-content" class="flex flex-column flex-auto overflow-auto surface-section">
+        <div class="surface-border border-round. surface-section flex-auto lg:ml-5; p-5" style="height: 0;">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

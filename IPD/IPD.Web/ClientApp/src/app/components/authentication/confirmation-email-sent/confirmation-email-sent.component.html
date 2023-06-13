@@ -1,0 +1,23 @@
+<div class="surface-ground" [@fadeAnimation]>
+  <div class="flex flex-wrap justify-content-center">
+    <div class="w-full p-4 lg:p-7 surface-card">
+      <div class="flex align-items-center justify-content-between mb-5">
+        <span class="text-2xl font-medium text-900">Confirmation Email Sent</span>
+      </div>
+      <div class="mb-3 ">
+        <div styleClass="w-full" class="success">
+            <div class="ml-2">
+              <div>  Confirmation email sent to your provided email id. </div>
+
+            </div>
+        </div>
+        <div class="flex align-items-center">
+          <small>
+            Didn't received verification email?
+          </small>
+          <a class="p-button-primary p-button-sm no-underline ml-3" (click)="resendVerificationEmail()"> Resend </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
